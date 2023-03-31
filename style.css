@@ -17,6 +17,7 @@
     top: 150px;
 }
 
+/* make the dinosaur jump by adding class */
 .animate{
     animation: jump 500ms;
 }
