@@ -3,13 +3,22 @@
     margin: 0;
 }
 
+body {
+    background-image: url(/imgs/il_fullxfull.2688503663_hz6m.webp);
+}
+
 #game-box {
     margin: auto;
     left: 200px;
     width: 500px;
     height: 200px;
     border: 1px solid black;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/46/664/1017/bliss-windows-xp-minimalism-valley-wallpaper-preview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
 
 #dinosaur {
     width: 70px;
@@ -45,14 +54,15 @@
     left: 480px;
     animation: cactus 1s infinite linear;
 }
+/* infinitely looped cactus */
 @keyframes cactus {
     0%{left:480px;}
     100%{left:-10px}
 }
 
 #score {
-    position:absolute; 
-    right:1%;
-    top: 1%;
+     
+    
+    
     
 }
