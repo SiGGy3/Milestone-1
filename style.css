@@ -4,15 +4,20 @@
 }
 
 #game-box {
+    margin: auto;
+    left: 200px;
     width: 500px;
     height: 200px;
     border: 1px solid black;
 }
 
 #dinosaur {
-    width: 20px;
+    width: 70px;
     height: 50px;
-    background-color: red;
+    background-image: url(imgs/ImpureDrearyHippopotamus-max-1mb.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     top: 150px;
 }
@@ -28,17 +33,26 @@
     100%{top:150px}
 }
 
-#block {
+#cactus {
     width: 20px;
-    height: 20px;
-    background-color: blue;
+    height: 40px;
+    background-image: url(imgs/cactus.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
-    top: 130px;
+    top: 110px;
     left: 480px;
-    animation: block 1s infinite linear;
+    animation: cactus 1s infinite linear;
 }
-@keyframes block {
+@keyframes cactus {
     0%{left:480px;}
-    100%{left:-40px}
+    100%{left:-10px}
 }
 
+#score {
+    position:absolute; 
+    right:1%;
+    top: 1%;
+    
+}
