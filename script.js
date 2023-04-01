@@ -2,24 +2,29 @@ var dinosaur =
 document.getElementById("dinosaur");
 var cactus = document.getElementById("cactus");
 var isAlive = true
+var score = 0;
 
+window.onload = function() {
+    setInterval(function() {
+        score += 1;
+        var scoreLabel = document.getElementById("scoring")
+        scoreLabel.innerHTML = "High Score: 0 score: " +score;
 
-
-let lastTime 
-function update(time) {
-    if (lastTime == null) {
-        lastTime = time
-        window.requestAnimationFrame(update)
-        return
-    }
-    const delta = time - lastTime
-    
-    
-
-    lastTime = time
-    window.requestAnimationFrame(update)
+    } ,100);
 }
-window.requestAnimationFrame(update)
+
+// let lastTime 
+// function update(time) {
+//     if (lastTime == null) {
+//         lastTime = time
+//         window.requestAnimationFrame(update)
+//         return
+//     }
+//     const delta = time - lastTime
+//     lastTime = time
+//     window.requestAnimationFrame(update)
+// }
+// window.requestAnimationFrame(update)
 
 // add the animation to the dinosaur by adding 'class'
 function jump() {
