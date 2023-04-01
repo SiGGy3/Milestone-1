@@ -3,16 +3,23 @@ document.getElementById("dinosaur");
 var cactus = document.getElementById("cactus");
 var isAlive = true
 var score = 0;
+var highScore = 0;
 
 window.onload = function() {
+    loadHighScore()
     setInterval(function() {
         score += 1;
         var scoreLabel = document.getElementById("scoring")
-        scoreLabel.innerHTML = "High Score: 0 score: " +score;
+        scoreLabel.innerHTML = "High Score: " +highScore+ " Score: " +score;
 
     } ,100);
 }
 
+function loadHighScore () {
+    if (localStorage.getItem("highScore") != null) {
+        highScore = localStorage.getItem("highScore");
+    }
+}
 // let lastTime 
 // function update(time) {
 //     if (lastTime == null) {
@@ -50,6 +57,11 @@ var checkDeath = setInterval(function(){
         alert("You Lost!");
         // game resets on "ok"
         isAlive = false;
+        if (score>highScore){
+            highScore = score;
+        }
+        
+        localStorage.setItem("highScore", highScore);
         location.reload();
     }
 },10);
