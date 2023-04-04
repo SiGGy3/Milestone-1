@@ -15,7 +15,7 @@ window.onload = function() {
         scoreLabel.innerHTML = "Score: " +score;
     } ,100);
 }
-
+ 
 function loadHighScore () {
     if (localStorage.getItem("highScore") != null) {
         highScore = localStorage.getItem("highScore");
@@ -36,35 +36,33 @@ function loadHighScore () {
 
 // add the animation to the dinosaur by adding 'class'
 function jump() {
-    var audio = new Audio("")
     if(dinosaur.classList != "animate"){
     dinosaur.classList.add("animate"); 
     }
-    audio.play();
     setTimeout(function(){
         dinosaur.classList.remove("animate")
     },500);
 }
+
 // WIN CONDITION & HIT DETECTION
-var checkDeath = setInterval(function(){
-    if (isAlive == false) return;
-    var dinosaurTop = 
-    parseInt(window.getComputedStyle(dinosaur).
-    getPropertyValue("top"));
-    var  cactusLeft = 
-    parseInt(window.getComputedStyle(cactus).
-    getPropertyValue("left"));
-    if(cactusLeft<70 && cactusLeft>0 && dinosaurTop>130){
-        cactus.style.animation = "none";
-        cactus.style.display = "none";
-        window.location.href = "lose.html"
-        // game resets on "ok"
-        isAlive = false;
-        if (score>highScore){
-            highScore = score;
-        }
-        // highscore is set at the end of every round
-        localStorage.setItem("highScore", highScore);
+// var checkDeath = setInterval(function(){
+//     if (isAlive == false) return;
+//     var dinosaurTop = 
+//     parseInt(window.getComputedStyle(dinosaur).
+//     getPropertyValue("top"));
+//     var  cactusLeft = 
+//     parseInt(window.getComputedStyle(cactus).
+//     getPropertyValue("left"));
+//     if(cactusLeft<70 && cactusLeft>0 && dinosaurTop>130){
+//         cactus.style.animation = "none";
+//         cactus.style.display = "none";
+//         window.location.href = "lose.html"
+//         isAlive = false;
+//         if (score>highScore){
+//             highScore = score;
+//         }
+//         // highscore is set at the end of every round
+//         localStorage.setItem("highScore", highScore);
         
-    }
-},10);
+//     }
+// },10);

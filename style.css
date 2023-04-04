@@ -65,11 +65,12 @@ body {
 #score {
     font-family: "Press Start 2P";
     position: relative;
-    left: 325px;
+    top: -12px;
 }
 
 #highscore {
     font-family: "Press Start 2P";
     position: relative;
-    left: 245px;
+    left: 420px;
+    top: 5px;
 }
