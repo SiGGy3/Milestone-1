@@ -45,24 +45,24 @@ function jump() {
 }
 
 // WIN CONDITION & HIT DETECTION
-// var checkDeath = setInterval(function(){
-//     if (isAlive == false) return;
-//     var dinosaurTop = 
-//     parseInt(window.getComputedStyle(dinosaur).
-//     getPropertyValue("top"));
-//     var  cactusLeft = 
-//     parseInt(window.getComputedStyle(cactus).
-//     getPropertyValue("left"));
-//     if(cactusLeft<70 && cactusLeft>0 && dinosaurTop>130){
-//         cactus.style.animation = "none";
-//         cactus.style.display = "none";
-//         window.location.href = "lose.html"
-//         isAlive = false;
-//         if (score>highScore){
-//             highScore = score;
-//         }
-//         // highscore is set at the end of every round
-//         localStorage.setItem("highScore", highScore);
+var checkDeath = setInterval(function(){
+    if (isAlive == false) return;
+    var dinosaurTop = 
+    parseInt(window.getComputedStyle(dinosaur).
+    getPropertyValue("top"));
+    var  cactusLeft = 
+    parseInt(window.getComputedStyle(cactus).
+    getPropertyValue("left"));
+    if(cactusLeft<70 && cactusLeft>0 && dinosaurTop>130){
+        cactus.style.animation = "none";
+        cactus.style.display = "none";
+        window.location.href = "lose.html"
+        isAlive = false;
+        if (score>highScore){
+            highScore = score;
+        }
+        // highscore is set at the end of every round
+        localStorage.setItem("highScore", highScore);
         
-//     }
-// },10);
+    }
+},10);
