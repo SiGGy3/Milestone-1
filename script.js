@@ -21,6 +21,9 @@ function loadHighScore () {
         highScore = localStorage.getItem("highScore");
     }
 }
+
+let jumpSound = new Audio('mixkit-quick-lock-sound-2854.wav')
+
 // let lastTime 
 // function update(time) {
 //     if (lastTime == null) {
@@ -42,6 +45,7 @@ function jump() {
     setTimeout(function(){
         dinosaur.classList.remove("animate")
     },500);
+    jumpSound.play()
 }
 
 // WIN CONDITION & HIT DETECTION
