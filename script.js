@@ -9,9 +9,10 @@ window.onload = function() {
     loadHighScore()
     setInterval(function() {
         score += 1;
-        var scoreLabel = document.getElementById("scoring")
-        scoreLabel.innerHTML = "High Score: " +highScore+ " Score: " +score;
-
+        var highscoreLabel = document.getElementById("highscore")
+        highscoreLabel.innerHTML = "High Score: " +highScore;
+        var scoreLabel = document.getElementById("score")
+        scoreLabel.innerHTML = "Score: " +score;
     } ,100);
 }
 
@@ -35,9 +36,11 @@ function loadHighScore () {
 
 // add the animation to the dinosaur by adding 'class'
 function jump() {
+    var audio = new Audio("")
     if(dinosaur.classList != "animate"){
     dinosaur.classList.add("animate"); 
     }
+    audio.play();
     setTimeout(function(){
         dinosaur.classList.remove("animate")
     },500);
@@ -60,7 +63,7 @@ var checkDeath = setInterval(function(){
         if (score>highScore){
             highScore = score;
         }
-        
+        // highscore is set at the end of every round
         localStorage.setItem("highScore", highScore);
         location.reload();
     }

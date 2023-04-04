@@ -1,10 +1,12 @@
 * {
     padding: 0;
     margin: 0;
+    user-select: none;
 }
 
 body {
     background-image: url(/imgs/il_fullxfull.2688503663_hz6m.webp);
+    
 }
 
 #game-box {
@@ -61,8 +63,13 @@ body {
 }
 
 #score {
-     
-    
-    
-    
+    font-family: "Press Start 2P";
+    position: relative;
+    left: 325px;
+}
+
+#highscore {
+    font-family: "Press Start 2P";
+    position: relative;
+    left: 245px;
 }
