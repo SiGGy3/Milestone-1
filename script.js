@@ -57,7 +57,7 @@ var checkDeath = setInterval(function(){
     if(cactusLeft<70 && cactusLeft>0 && dinosaurTop>130){
         cactus.style.animation = "none";
         cactus.style.display = "none";
-        alert("You Lost!");
+        window.location.href = "lose.html"
         // game resets on "ok"
         isAlive = false;
         if (score>highScore){
@@ -65,6 +65,6 @@ var checkDeath = setInterval(function(){
         }
         // highscore is set at the end of every round
         localStorage.setItem("highScore", highScore);
-        location.reload();
+        
     }
 },10);
