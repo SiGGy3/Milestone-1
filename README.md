@@ -7,3 +7,4 @@ My inspiration for this was that the original Chrome game really interested me b
 
 REFERENCES:
 sprites taken from https://www.spriters-resource.com/browser_games/googledinosaurrungame/sheet/78171/
+The commented code in my javascript was an attempt at using time to make the score go up. It was code I was getting from a youtube video that I later decided to not use. 
